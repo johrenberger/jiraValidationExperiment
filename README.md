@@ -2,11 +2,17 @@
 
 ✅ Summary: GitLab CI Template for Jira Ticket Validation
 
-jira-validation.yml:	CI job template to validate Jira tickets in commit messages
-validate-jira.ts:	TypeScript script to perform ticket validation via Jira API
-Shared project repo:	Stores template and script for cross-project use
-
 This provides an experimental layout of a Typescript solution for evaluating JIRA tickets in a GitLab commit to ensure that they are still in an active state (not closed, done or resolved)
+
+🏗️ Project Layout
+jira-ci-templates/
+├── templates/
+│   └── jira-validation.yml
+├── scripts/
+│   └── validate-jira.ts
+├── package.json
+├── tsconfig.json
+└── README.md
    
 📦 Usage in Other Projects
 In your .gitlab-ci.yml:
