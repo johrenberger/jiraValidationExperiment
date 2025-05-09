@@ -1,0 +1,13 @@
+.validate-jira:
+  stage: validate
+  image: node:20
+  before_script:
+    - npm ci
+  script:
+    - npx ts-node scripts/validate-jira.ts
+  only:
+    - branches
+    - merge_requests
+  variables:
+    JIRA_AUTH: $JIRA_AUTH
+    JIRA_DOMAIN: $JIRA_DOMAIN
