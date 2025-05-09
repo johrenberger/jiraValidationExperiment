@@ -5,6 +5,7 @@
 This provides an experimental layout of a Typescript solution for evaluating JIRA tickets in a GitLab commit to ensure that they are still in an active state (not closed, done or resolved)
 
 🏗️ Project Layout
+```
 jira-ci-templates/
 ├── templates/
 │   └── jira-validation.yml
@@ -13,12 +14,13 @@ jira-ci-templates/
 ├── package.json
 ├── tsconfig.json
 └── README.md
-   
+```
+
 📦 Usage in Other Projects
 In your .gitlab-ci.yml:
 
 yaml
-
+```
 include:
   - project: 'your-group/jira-ci-templates'
     file: '/templates/jira-validation.yml'
@@ -26,7 +28,7 @@ include:
 
 validate-jira:
   extends: .validate-jira
-
+```
 
 🔐 Secure Variables in GitLab
 Under Settings > CI/CD > Variables, add:
