@@ -34,7 +34,7 @@ validate-jira:
 Under Settings > CI/CD > Variables, add:
 
  Variable  | Example | Scope 
- ------------- | ------------- 
+ --- | --- | --- 
  JIRA_AUTH  | base64(email:api_token)  | Masked, protected 
  JIRA_DOMAIN  | your-domain.atlassian.net  | Protected 
 
